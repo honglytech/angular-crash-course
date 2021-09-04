@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field class="add-margin" appearance="fill">
+    <mat-label>Breed</mat-label>
+    <input matInput placeholder="Shiba Inu" name="breed" [(ngModel)]="breed" />
+  </mat-form-field>
+  <mat-form-field class="add-margin" appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput name="url" [(ngModel)]="url" />
+  </mat-form-field>
+  <mat-form-field class="add-margin" appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput name="description" [(ngModel)]="description" />
+  </mat-form-field>
+  <button mat-raised-button color="primary">ADD</button>
+</form>

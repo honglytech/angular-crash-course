@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ pet.breed }}</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="image-size"
+    mat-card-image
+    src="{{ pet.url }}"
+    alt="Photo of a dog"
+  />
+  <mat-card-content>
+    <p>
+      {{ pet.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      [color]="pet.favorite ? 'warn' : ''"
+      aria-label="favorite button"
+      (click)="onFavorite()"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-button (click)="onDelete(pet)">DELETE</button>
+  </mat-card-actions>
+</mat-card>
